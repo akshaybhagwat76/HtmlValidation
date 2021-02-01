@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"
+    id="bootstrap-css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <h3>Using CSS to style an HTML Form</h3>
+
+  <div>
+    <form autocomplete="off" id="contactFrm">
+      <label for="fname">First Name</label>
+      <input type="text" class="required" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Salary</label>
+      <input type="text" class="required" id="lname" name="slry" placeholder="Your Salary..">
+
+      <label for="lname">Age</label>
+      <input type="text" class="required" id="lname" name="Age" placeholder="Your Age..">
+
+      <label for="lname">Designation</label>
+      <input type="text" class="required" id="desi" name="desi" placeholder="Your Designation..">
+
+      <label for="vehicle1">IS salaried</label>
+      <input type="checkbox" id="slry" name="slry" value="Salaried ">
+      </br>
+      <label for="lname">Gender</label>
+      <input type="radio" id="male" name="mle" value="Male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="female" value="female">
+      <label for="female">Female</label><br>
+      </br>
+      <label for="country">Country</label>
+      <select id="country" class="required" name="country">
+        <option value="australia">India</option>
+        <option value="canada">USA</option>
+        <option value="usa">UK</option>
+      </select>
+      <div>
+        <input type="button" class="btn btn-primary" id="btnSubmit" value="Submit">
+        <input type="submit1" value="Cancel">
+      </div>
+    </form>
+  </div>
+
+</body>
+<script>
+  $(document).ready(function () {
+
+
+  });
+  $("#btnSubmit").on("click", function () {
+    debugger
+    $("#contactFrm .required").each(function () {
+      if (!$(this).val()) {
+        $(this).addClass("adderror");
+      }
+      else {
+        $(this).removeClass("adderror");
+      }
+    })
+  })
+</script>
+
+</html>
